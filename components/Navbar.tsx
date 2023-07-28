@@ -27,7 +27,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 ]
 
-export default function Navbar() {
+const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "system" ? systemTheme : theme
   const pathname = usePathname()
@@ -103,3 +103,4 @@ export default function Navbar() {
     </header>
   )
 }
+export default Navbar

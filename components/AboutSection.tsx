@@ -1,5 +1,7 @@
-import React from "react"
-import Image from "next/image"
+"use client"
+import React from "react";
+import Image from "next/image";
+
 
 const skills = [
   { skill: "HTML" },
@@ -13,7 +15,7 @@ const skills = [
   { skill: "Git" },
   { skill: "GitHub" },
   { skill: "Jupyter Notebooks" },
-]
+];
 
 const AboutSection = () => {
   return (
@@ -23,7 +25,6 @@ const AboutSection = () => {
           About Me
           <hr className="w-6 h-1 mx-auto my-4 bg-blue-500 border-0 rounded"></hr>
         </h1>
-
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
           <div className="md:w-1/2 ">
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
@@ -55,7 +56,7 @@ const AboutSection = () => {
               <span className="font-bold text-teal-500">
                 never stop growing
               </span>{" "}
-              and that&#39;s what I strive to do, I have a passion for
+              and thats what I strive to do, I have a passion for
               technology and a desire to always push the limits of what is
               possible. I am excited to see where my career takes me and am
               always open to new opportunities. 🙂
@@ -72,14 +73,14 @@ const AboutSection = () => {
                   >
                     {item.skill}
                   </p>
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

@@ -1,7 +1,8 @@
-"use client";
-import { useState } from "react";
+"use client"
+import { ChangeEvent, useState, useEffect } from "react";
 import emailicon from "../constants/images";
 import Image from "next/image";
+import dynamic from 'next/dynamic';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,9 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (event) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -30,6 +33,10 @@ const Contact = () => {
     });
   };
 
+  useEffect(() => {
+
+  }, []);
+
   return (
     <section id="contact">
       <div>
@@ -39,19 +46,21 @@ const Contact = () => {
             <hr className="w-6 h-1 mx-auto my-4 bg-blue-500 border-0 rounded"></hr>
           </h1>
           <div className="flex text-center items-center justify-center ">
-          <div className="flex space-x-4">
-            <Image
-              src="/emailicon.png"
-              alt=""
-              width={40}
-              height={40}
-              className="mx-auto mb-10 rounded-full shadow-2xl"
-            />
-              <a href="mailto:gordontheprogrammer@gmail.com" className="font-semibold text-gray-600">
+            <div className="flex space-x-4">
+              <Image
+                src="/emailicon.png"
+                alt=""
+                width={40}
+                height={40}
+                className="mx-auto mb-10 rounded-full shadow-2xl"
+              />
+              <a
+                href="mailto:gordontheprogrammer@gmail.com"
+                className="font-semibold text-gray-600"
+              >
                 gordontheprogrammer@gmail
               </a>
-              </div>
-
+            </div>
           </div>
           <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
             <input
